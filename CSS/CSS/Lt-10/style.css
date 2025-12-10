@@ -1,0 +1,38 @@
+.all{
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+
+}
+
+#box1{
+    background-color: #33b864;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+
+}
+
+#box2{
+    background-color: #95f3ea;
+    top: 100px;
+    left: 120px;
+    z-index: 15;
+
+}
+
+#box3{
+    background-color: #d00730;
+    top: 150px;
+    left: 190px;
+    z-index: 5;
+
+}

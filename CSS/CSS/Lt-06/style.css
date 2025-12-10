@@ -1,0 +1,47 @@
+body{
+    background-color: gray;
+}
+img{
+     width: 100px; 
+     height: 100px;
+     border: 1px solid black;
+     border-radius: 100px;
+     padding: 0;
+     margin: 0;
+}
+#card{
+    position: relative;
+    background-color: #D7EFDB;
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 500px;
+    padding: 20px;
+    border: 1px solid black;
+
+}
+
+#badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #33e45d;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid black;
+}
+#name{
+    font-size: 16px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#bio{
+    text-align: justify;
+    font-weight: lighter;
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

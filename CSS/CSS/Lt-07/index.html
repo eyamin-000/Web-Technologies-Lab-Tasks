@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sticky Header Page
+        </title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Sticky Header Page">
+        <meta name="author" content="Eyamin Khan Emon">
+        <meta name="keyword" content="website, metadata">
+        <meta name="viewport" content="width=device-width" inital-scale="1.0">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div>
+            <span id="name">Khan Tech</span>
+            <span id="link">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Articles</a>
+                <a href="#">About</a>
+            </span>
+        </div>
+        <p>Introduction: This blog focuses on post-training generative recommender systems.
+            Generative recommenders (GRs) represent a new paradigm in the field of recommendation systems (e.g. HSTU, OneRec).
+            These models draw inspiration from recent advancements in transformer architectures used for language and vision tasks.
+            They approach the recommendation problem, including both ranking and retrieval, as a sequential transduction task.
+            This perspective enables generative training, where the model learns by imitating the next event in a sequence of user activities, thereby effectively modeling user behavior over time.
+            However, a key challenge with simply replicating observed user patterns is that it may not always lead to the best possible recommendations.
+            User interactions are influenced by a variety of factors — such as trends, or external suggestions — and the system’s view of these interactions is inherently limited. For example, if a user tries a popular show but later indicates it wasn’t a good fit, a model that only imitates this behavior might continue to recommend similar content, missing the chance to enhance the user’s experience.
+            This highlights the importance of incorporating user preferences and feedback, rather than solely relying on observed behavior, to improve recommendation quality.
+            In the context of recommendation systems, we benefit from a wealth of user feedback, which includes explicit signals such as ratings and reviews, as well as implicit signals like watch time, click-through rates, and overall engagement.
+            This abundance of feedback serves as a valuable resource for improving model performance.
+            Given the recent success of reinforcement learning techniques in post-training large language models, such as DPO and GRPO,
+            this study investigates whether similar methods can be applied to generative recommenders. Ultimately, our goal is to 
+            identify both the opportunities and challenges in using these techniques to enhance the quality and relevance of
+            recommendations.
+            Unlike language models, post-training generative recommenders presents unique challenges.
+            One of the most significant is the difficulty of obtaining counterfactual feedback in recommendation scenarios.
+            The recommendation feedback is generated on-policy — that is, it reflects users’ real-time interactions with the system
+            as they naturally use it. Since a typical user sequence can span weeks or even years of activity, it is impractical to
+            ask users to review or provide feedback on hypothetical, counterfactual experiences. As a result, the absence of
+            counterfactual data makes it challenging to apply post-training methods such as PPO or DPO, which require feedback from
+            counterfactual user sequences.
+            Furthermore, post-training methods typically rely on a reward model — either implicit or explicit — to guide optimization.
+            The quality of reward models heavily influences the effectiveness of post-training. In the context of recommendation systems,
+            however, reward signals tend to be much noisier. For instance, if we use watch time as an implicit reward, it may not always
+            accurately reflect user satisfaction: a viewer might stop watching a favorite show simply due to time constraints, while
+            finishing a lengthy show doesn’t necessarily indicate genuine enjoyment.
+            To address these post-training challenges, we introduce a novel algorithm called Advantage-Weighted Supervised
+            Fine-tuning (A-SFT). Our analysis first demonstrates that reward models in recommendation systems often exhibit
+            higher uncertainty due to the issues discussed above. Rather than relying solely on these uncertain reward models,
+            A-SFT combines supervised fine-tuning with the advantage function to more effectively guide post-training optimization.
+            This approach proves especially effective when the reward model has high variance but still provides valuable directional
+            signals. We benchmark A-SFT against four other representative methods, and our results show that A-SFT achieves better
+            alignment between the pre-trained generative recommendation model and the reward model.
+            In Figure 1, we conceptualize the pros and cons of different post-training paradigms. For example,
+            Online Reinforcement Learning is most useful when the reward model has a good generalization ability,
+            and behavior cloning is suitable when no reward models are available. Using these algorithms under fitting
+            use cases is the key to a successful post-training. For example, over-exploitation of noisy reward models
+            will hurt task performance, as guidance from the reward models can be simply noise. Conversely, not leveraging
+            a good reward model leaves out potential improvements. We find A-SFT fits the sweet point between offline
+            reinforcement learning and behavior cloning, where it benefits from the directional signals in those noisy estimations
+            and is less dependent on the reward accuracy.
+            Challenges in Post-training for Recommendation
+            Reinforcement Learning from Human Feedback (RLHF) is the most popular framework for post-training large language models.
+            In this framework, human annotators evaluate and rank different outputs generated by a model. This feedback is then used
+            to train a reward model that predicts how well a model output aligns with human preferences. This reward model then serves 
+            as a proxy for human judgment during reinforcement learning, guiding the model to generate outputs that are more likely to
+            be preferred by humans.
+            While traditional RLHF methods like PPO or DPO are effective for aligning LLMs, there are several challenges
+            in applying them directly to large-scale recommendation systems:
+            Lack of Counter-factual Observations
+            As in typical RLHF settings, collecting real-time feedback from a diverse user base across a wide range of items
+            is both costly and impractical. The data in recommendation are generated by the real-time user interests.
+            Any third-party annotators or even the user themselves lack the practical means to evaluate an alternative reality.
+            For example, it is impractical to ask the Netflix users to evaluate hundreds of unseen movies. Consequently, we lack a
+            live environment in which to perform reinforcement learning.
+            2. Noisy Reward Models
+            In addition to the limited counter-factual data, the recommendation task itself has a higher randomness by
+            its nature. The recommendation data has less structure than language data. Users choose to watch some shows not 
+            because there is a grammar rule that nouns need to follow by the verbs. In fact, the users’ choices usually exhibit a 
+            level of permutation invariance, where swapping the order of events in the user history still makes a valid activity sequence.
+            This randomness in the behaviors makes learning a good reward model extremely difficult. Often the reward models we learnt 
+            still have a large margin of errors.
+            Here is an ablation study we did on the reward model performance with O(Millions) users and O(Billions) of tokens. 
+            The reward model uses an open-sourced HSTU architecture in the convenience of reproducing this study. We adopt the 
+            standard RLHF approach of training a reward model using offline, human-collected feedback. We start by creating a proxy 
+            reward, scored on a scale from 1 to 5 in the convenience of understanding. This reward model is co-trained as a shallow 
+            reward head on top of the generative recommender. It predicts the reward for the most recently selected title based on a 
+            user’s interaction history. To evaluate its effectiveness, we compare the model’s performance against two simple 
+            baselines: (1) predicting the next reward as the average reward the user has given in their past interactions, 
+            and (2) predicting it as the average reward that all users have assigned to that particular title in previous interactions.</p>
+
+
+    </body>
+</html>

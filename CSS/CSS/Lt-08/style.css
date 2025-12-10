@@ -1,0 +1,40 @@
+/* 1. overflow: visible (text goes outside the box) */
+#visible{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    overflow:visible;
+
+}
+/* 2. overflow: hidden (extra text is cut off, no scroll) */
+#hidden{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    
+}
+/* 3. overflow: scroll (always shows scrollbars) */
+#scroll{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    overflow: scroll;
+    
+}
+/* 4. overflow: auto (shows scrollbar only when needed) */
+#auto{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    
+}
+
+p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

@@ -1,0 +1,66 @@
+div{
+    display: inline-block;
+    margin: 6px;
+    padding: 0;
+    vertical-align: top;
+
+}
+
+#sidebar{
+    border: 3px solid black;
+    width: 20%;
+    top: 0;
+    height: 700px;
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: #B8C19C;
+
+}
+
+#main_content{
+    border: 3px solid black;
+    width: 55%;
+    top: 0;
+    height: 700px;
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: #BD9C7A;
+
+}
+
+#advertisement{
+    border: 3px solid black;
+    width: 20%;
+    top: 0px;
+    height: 700px;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: #F3F0DD;
+
+}
+body{
+    background-color: darkgray;
+
+}
+
+h1{
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 10px;
+    color: rgb(0, 0, 0);
+}
+
+ol{
+    text-align: justify;
+}
+ul{
+    text-align: justify;
+}
+
+.adblock{
+    display: block;
+    border: 1px solid gold;
+    height: 100px;
+}

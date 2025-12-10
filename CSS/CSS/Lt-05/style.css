@@ -1,0 +1,20 @@
+#contact{
+    position: fixed;
+    text-align: center;
+    bottom:0;
+    margin-left: 960px;
+    padding: 0;
+    background-color: #CDD4B1;
+    border: 2px solid black;
+    z-index:100;
+}
+legend{
+    font-weight: bold;
+}
+#text{
+    font-size: 200px;
+    text-align: center;
+}
+#contact:hover{
+    background-color: #71AE9A;
+}
