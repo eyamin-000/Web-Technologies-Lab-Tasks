@@ -1,0 +1,21 @@
+body{
+    background-color: honeydew;
+}
+#text{
+    background-color: white;
+    font-size: 14px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid tan;
+    border-radius: 10px;
+}
+button{
+    background-color: aliceblue;
+    color: black;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

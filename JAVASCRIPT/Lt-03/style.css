@@ -1,0 +1,16 @@
+body{
+    transition: 0.3s;
+    text-align: center;
+}
+header, footer, main{
+    padding: 20px;
+    margin: 10px;
+    transition: 0.3s;
+    border: 2px solid rgb(130, 114, 114);
+    letter-spacing: 60px;
+}
+#btn{
+    font-size: 50px;
+    color: aliceblue;
+    background-color: rgb(45, 44, 44);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Student Admission Form
+        </title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="This my Portfolio">
+        <meta name="author" content="Eyamin Khan Emon">
+        <meta name="keyword" content="website, metadata">
+
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <form id="form" onsubmit="return validateForm()">
+            <p align="center" style="font-size: large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Student Admission Form</p>
+            <fieldset style="width: 600px; margin-left: 320px;">
+                <legend align="center">Personal Details</legend>
+
+                <lebel for="name">Full Name: </lebel>
+                <input type="text" id="name" name="name">
+                <span style="color:red" id="nameERR"></span>
+                <br>
+                <br>
+                <lebel for="email">Email: </lebel>
+                <input type="email" id="email" name="email">
+                <span style="color:red" id="emailERR"></span>
+                <br>
+                <br>
+                <lebel for="age">Age: </lebel>
+                <input type="number" id="age" name="age">
+                <span style="color:red" id="ageERR"></span>
+                <br>
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <span style="color:red" id="passERR"></span>
+                <br>
+                <br>
+                <label for="conPassword">Confirm Password</label>
+                <input type="conPassword" id="conPassword">
+                <span style="color:red" id="conPassERR"></span>
+                <br>
+                <br>
+                <lebel for="pnum">Phone Number: </lebel>
+                <input type="text" id="pnum" name="pnum">
+                <span style="color:red" id="pnumERR"></span>
+
+
+            </fieldset>
+            <br>
+            <button style="background-color: aquamarine; margin-left: 600px ;" type="submit">Submit</button>
+
+        </form>
+
+    </body>
+</html>

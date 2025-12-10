@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <nav id="nav">
+            <a id="a" href="#about">ABOUT</a>
+            <a id="b" href="#project">PROJECT</a>
+            <a id="c" href="#contact">CONTACT</a>
+        </nav>
+        <div id="greetings"></div>
+
+        <section id="about" class="section">
+            <h3 id="h_about" class="head">ABOUT</h3>
+            <p>Hello guys! I'm Eyamin Khan Emon, a Student of Computer Science.<br>
+                I like to do what I want, when I want!<br>
+                Also, I like to create beautiful writing.
+            </p>
+        </section>
+
+        <section id="project" class="section">
+            <h3 id="h_project" class="head">PROJECT</h3>
+            <ol>
+                <li>Car Shop Management System</li>
+                <li>Cholo Ghuri-Travel Ticket management System</li>
+                <li>Rastaurent Management System</li>
+                <li>Trip Diary-Tour Suggestion And Travel Management System</li>
+            </ol>
+        </section>
+
+        <section id="contact" class="section">
+            <h3 id="h_contact" class="head">CONTACT</h3>
+            <fieldset>
+                <legend style="text-align: center;">Your Massege</legend>
+                <form id="Form">
+                    <lebel for="name">Your Name: </lebel><br>
+                        <input type="text" id="name" name="name" placeholder="Your name...">
+                        <span style="color:red" id="nameERR"></span>
+                        <br>
+                        <lebel for="email">Email: </lebel><br>
+                        <input type="email" id="email" name="email" placeholder="Your email...">
+                        <span style="color:red" id="emailERR"></span>
+                        <br>
+                        <lebel for="message">Message: </lebel><br>
+                        <textarea type="message" id="message" name="message" placeholder="your message..."></textarea>
+                        <span style="color:red" id="msgERR"></span>
+                        <br>
+                        <button style="margin-left: 30px;" type="submit">Send message</button>
+                </form>
+            </fieldset>
+        </section>
+        <button id="mode">Mode</button>
+    </body>
+</html>

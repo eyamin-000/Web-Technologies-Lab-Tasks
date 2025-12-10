@@ -1,0 +1,17 @@
+#slide{
+    width:500px;
+    margin: 50px;
+    text-align: center;
+}
+#images{
+    width:700px;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.button{
+    padding:10px;
+    margin: 15px;
+    font-size: 15px;
+    text-align: center;
+}

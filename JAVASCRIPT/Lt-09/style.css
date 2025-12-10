@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    background-color: #A7D67D;
+    display: flex;
+    min-height: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    border: 1px solid black;
+}
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+}
+div{
+    position: sticky;
+    top: 81px;
+    font-size: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: tan;
+    padding-bottom: 5pxs;
+}
+h3{
+    letter-spacing: 30px;
+}
+
+#h_about{
+    font-size: 30px;
+    color: #FF0800;
+}
+#h_project{
+    font-size: 30px;
+    color: #61DE2A;
+}
+#h_contact{
+    font-size: 30px;
+    color: #5539CC;
+}
+section{
+    margin-left: 15px;
+}
+fieldset{
+    width: 200px;
+}
+#mode{
+    position: fixed;
+    right: 0;
+    top: 25%;
+    margin-right: 10px;
+    font-size: 15px;
+    letter-spacing: 10px;
+    text-align: center;
+    padding: 10px;
+}
