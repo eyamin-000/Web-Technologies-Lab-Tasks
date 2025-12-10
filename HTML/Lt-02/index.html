@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Student Admission Form
+        </title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="This my Portfolio">
+        <meta name="author" content="Eyamin Khan Emon">
+        <meta name="keyword" content="website, metadata">
+    </head>
+
+    <body>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <p align="center" style="font-size: large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Student Admission Form</p>
+            <fieldset style="width: 600px; margin-left: 320px;">
+                <legend align="center">Personal Details</legend>
+
+                <lebel for="name">Full Name: </lebel>
+                <input type="text" id="name" name="name" placeholder="write your full name..." maxlength="40" required>
+                <br>
+                <br>
+                <lebel for="date">Date of Birth: </lebel>
+                <input type="date" id="date" name="date" required>
+                <br>
+                <br>
+                <lebel for="gender">Gender: </lebel>
+                <input type="radio" id="male" name="gender" value="male">Male
+                <input type="radio" id="female" name="gender" value="female">Female
+                <input type="radio" id="other" name="gender" value="other">Other
+                <br>
+                <br>
+                <lebel for="address">Home Address: </lebel>
+                <textarea type="address" id="address" name="address" rows="2" placeholder=" write your address..." maxlength="60" required></textarea>
+                <br>
+                <br>
+                <lebel for="pnum">Phone Number: </lebel>
+                <input type="text" id="pnum" name="pnum" placeholder=" write your phone number..." maxlength="11" required>
+                <br>
+                <br>
+                <lebel for="email">Email: </lebel>
+                <input type="email" id="email" name="email" placeholder="Your email..." required>
+                <br>
+                <br>
+                <lebel for="religion">Religion: </lebel>
+                <input type="radio" id="islam" name="religion" value="islam">Islam
+                <input type="radio" id="hinduism" name="religion" value="hinduism">Hinduism
+                <input type="radio" id="buddhism" name="religion" value="buddhism">Buddhism
+                <input type="radio" id="christianty" name="religion" value="christianty">Christianty
+                <input type="radio" id="other" name="religion" value="other">Other
+            </fieldset>
+            <fieldset style="width: 600px; margin-left: 320px;">
+                <legend align="center">Academic Background</legend>
+
+                <lebel for="dname">Degree Name: </lebel>
+                <select id="dname" name="dname">
+                    <option id="noOption" value="">Select Degree</option>
+                    <option id="honours" value="honours">Honours</option>
+                    <option id="hsc" value="hsc">HSC</option>
+                    <option id="ssc" value="ssc">SSC</option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <lebel for="group/major">Major/Group: </lebel>
+                <select id="group/major" name="group/major">
+                    <option id="noOption" value="">Select Group/Major: </option>
+                    <option id="science" value="science">Science</option>
+                    <option id="commerce" value="commerce">Commerce</option>
+                    <option id="arts" value="arts">Arts</option>
+                    <option id="physics" value="physics">Physics</option>
+                    <option id="chemistry" value="chemistry">Chemistry</option>
+                    <option id="mathematics" value="mathematics">Mathematics</option>
+                    <option id="biology" value="biology">Biology</option>
+                    <option id="cse" value="cse">CSE</option>
+                    <option id="eee" value="eee">EEE</option>
+                </select>
+                    <br>
+                    <br>
+                <lebel for="board/university">Major/Group: </lebel>
+                <select id="board/university" name="board/university">
+                    <option id="noOption" value="">Select Board/University: </option>
+                    <option id="dhaka" value="dhaka">Dhaka</option>
+                    <option id="comilla" value="comilla">Comilla</option>
+                    <option id="chittagong" value="chittagong">Chittagong</option>
+                    <option id="barishal" value="barishal">Barishal</option>
+                    <option id="aiub" value="aiub">AIUB</option>
+                    <option id="nsu" value="nsu">NSU</option>
+                    <option id="brack" value="brack">Brack</option>
+                    <option id="iub" value="iub">IUB</option>
+                    <option id="uiu" value="uiu">UIU</option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                
+                <lebel for="result">Result: </lebel>
+                <input type="text" id="result" name="result" placeholder="cgpa/gpa" maxlength="4" required>
+                <br>
+                <br>
+                <lebel for="date">Passing Year: </lebel>
+                <input type="date" id="date" name="date" required>
+            </fieldset>
+            <fieldset style="width: 600px; margin-left: 320px;">
+                <legend align="center">Preferred Department</legend>
+
+                <lebel for="preferred_dept">Preferred Department: </lebel>
+                <select id="preferred_dept" name="preferred_dept">
+                    <option id="noOption" value="">Select Preferred Department: </option>
+                    <option id="cse" value="cse">Computer Science & Engineering</option>
+                    <option id="eee" value="eee">Electrical & Electronics Engineering</option>
+                    <option id="ipe" value="ipe">Industrial & Production Engineering</option>
+                    <option id="architect" value="architect">Architecture Engineering</option>
+                    <option id="bba" value="bba">Business Administration</option>
+                    <option id="english" value="english">English</option>
+                    <option id="cn" value="cn">Computer Networks</option>
+                    </select>
+                <br>
+                <br>
+                <lebel for="interests[]">Interests: </lebel>
+                <br>
+                <input type="checkbox" id="machinelearning" name="interests[]" value="machinelearning">Machine Learning
+                <br>
+                <input type="checkbox" id="datascience" name="interests[]" value="datascience">Data Science
+                <br>
+                <input type="checkbox" id="graphics" name="interests[]" value="graphics">Graphics Design
+                <br>
+                <input type="checkbox" id="cp" name="interests[]" value="cp">Competative Programming
+                <br>
+                <input type="checkbox" id="blockcain" name="interests[]" value="blockcain">Blockcain
+                <br>
+                <input type="checkbox" id="3danimation" name="interests[]" value="3danimation">3D Animation
+                <br>
+                <input type="checkbox" id="videoediting" name="interests[]" value="videoediting">Video Editing
+                <br>
+                <input type="checkbox" id="scriptwriting" name="interests[]" value="scriptwriting">Script Writing
+                <br>
+                <br>
+                <lebel for="courses[]">Select your desired Courses: </lebel>
+                <br>
+                <input type="checkbox" id="machinelearning" name="courses[]" value="machinelearning">Machine Learning
+                <br>
+                <input type="checkbox" id="datascience" name="courses[]" value="datascience">Data Science
+                <br>
+                <input type="checkbox" id="graphics" name="courses[]" value="graphics">Computer Graphics
+                <br>
+                <input type="checkbox" id="algorithm" name="courses[]" value="algorithm">Algorithm
+                <br>
+                <input type="checkbox" id="blockcain" name="courses[]" value="blockcain">Blockcain
+                <br>
+                <input type="checkbox" id="3danimation" name="courses[]" value="3danimation">3D Animation
+                <br>
+                <input type="checkbox" id="electricalcircuit" name="courses[]" value="electricalcircuit">Electrical Circuit
+                <br>
+                <input type="checkbox" id="database" name="courses[]" value="database">Database
+            </fieldset>
+            
+            <fieldset style="width: 600px; margin-left: 320px;">
+                <legend align="center">Upload Documents</legend>
+                <label for="pdf">Upload PDF: </label>
+                <input type="file" id="pdf" name="pdf" required>
+                <br>
+                <br>
+                <label for="photo">Upload Photo: </label>
+                <input type="file" id="photo" name="photo" required>
+            </fieldset>
+            <br>
+            <button style="background-color: aquamarine; margin-left: 590px ;" type="submit">Submit</button>
+            <button style="background-color: red;" type="reset">Reset</button>
+
+        </form>
+
+    </body>
+</html>
